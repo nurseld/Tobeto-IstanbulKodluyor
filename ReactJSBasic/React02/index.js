@@ -20,4 +20,8 @@ function runCallBackFunc(callback){
 //     console.log("Hello World");
 // });
 
+// runCallbackFunc(() => {
+//   console.log("Hello World!");
+// });
+
 runCallBackFunc(() => console.log("Hello World"));
