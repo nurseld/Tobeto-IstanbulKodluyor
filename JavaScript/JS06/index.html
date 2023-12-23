@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+  <head>
+
+    <script>
+        
+      var fruits = ["Strawberry", "Orange", "Apple", "Mango"];
+
+      function push() {
+        
+        fruits.push("Kiwi");
+        console.log(fruits);
+        
+      }
+
+      function pop() {
+
+        fruits.pop();
+        console.log(fruits);
+
+      }
+
+      function unShift() {
+
+        fruits.unshift("Kiwi");
+        console.log(fruits);
+
+      }
+
+      function shift() {
+
+        fruits.shift();
+        console.log(fruits);
+
+      }
+
+      function sort() {
+
+        fruits.sort();
+        console.log(fruits);
+
+      }
+
+      function reverse() {
+
+        fruits.reverse();
+        console.log(fruits);
+
+      }
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <h1>Arrays</h1>
+    <hr />
+
+    <button onclick="push()">Push(Adding End)</button>
+    <button onclick="pop()">Pop(Extraction End)</button>
+    <button onclick="unShift()">UnShift(Adding Start)</button>
+    <button onclick="shift()">Shift(Extraction Start)</button>
+    <button onclick="sort()">Sort(A-Z)</button>
+    <button onclick="reverse()">Reverse</button>
+
+  </body>
+
+</html>
