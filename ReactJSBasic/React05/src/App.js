@@ -1,14 +1,19 @@
 //import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Header from "./components/Header.js";
 
 function App() {
   return (
 
-    <div>
+    <React.Fragment>
       <Header/>
-      Hello World!
-    </div>
+      <p className='App'>Hello World!</p>
+      <label htmlFor = "myinput">
+        Name
+        <input id = "myinput"></input>
+      </label>
+    </React.Fragment>
 
   );
 }
