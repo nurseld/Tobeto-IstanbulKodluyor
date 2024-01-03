@@ -9,6 +9,8 @@ import UserDetail from './components/UserDetail.js';
 import UsingState from './components/UsingState.js';
 import StateArray from './components/StateArray.js';
 import StateObject from './components/StateObject.js';
+import StateInput from './components/StateInput.js';
+import StateInput2 from './components/StateInput2.js';
 
 const _info = {
 
@@ -67,7 +69,11 @@ function App() {
 
       {/* <StateArray /> */}
 
-      <StateObject />
+      {/* <StateObject /> */}
+
+      {/* <StateInput /> */}
+
+      <StateInput2 />
 
     </div>
 
