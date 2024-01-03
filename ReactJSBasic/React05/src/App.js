@@ -8,6 +8,7 @@ import Loops from './components/Loops.js';
 import UserDetail from './components/UserDetail.js';
 import UsingState from './components/UsingState.js';
 import StateArray from './components/StateArray.js';
+import StateObject from './components/StateObject.js';
 
 const _info = {
 
@@ -64,7 +65,9 @@ function App() {
 
       {/* <UsingState /> */}
 
-      <StateArray />
+      {/* <StateArray /> */}
+
+      <StateObject />
 
     </div>
 
