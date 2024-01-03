@@ -24,13 +24,19 @@ function UserDetail({ name, age, hobbies, address }) {
 }
 
 UserDetail.propTypes = {
-    name: PropTypes.string,
-    age: PropTypes.number,
+    name: PropTypes.string.isRequired,
+    age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
     hobbies: PropTypes.array,
     address: PropTypes.shape({
         detail: PropTypes.string,
         zipcode: PropTypes.number
     })
 }
+
+UserDetail.defaultProps = {
+    name: "---",
+    hobbies: ["hobby1", "hobby2"]
+}
+
 
 export default UserDetail;

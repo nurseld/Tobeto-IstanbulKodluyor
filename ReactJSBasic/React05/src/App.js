@@ -58,7 +58,7 @@ function App() {
 
       {/* <Loops users={users} /> */}
 
-      <UserDetail name={"Nursel Demirkıran"} age={27} hobbies={["book", "guitar", "coding"]} address={{ detail: "address", zipcode: 59500 }} />
+      <UserDetail name={"Nursel Demirkıran"} age={"27"} hobbies={["book", "guitar", "coding"]} address={{ detail: "address", zipcode: 59500 }} />
 
     </div>
 
