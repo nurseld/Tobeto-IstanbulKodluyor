@@ -3,6 +3,14 @@ import React from 'react';
 import './App.css';
 import Header from "./components/Header.js";
 import Variables from './components/Variables.js';
+import Props from './components/Props.js';
+
+const _info = {
+
+  title: "Lorem, ipsum dolor.",
+  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur rem blanditiis similique."
+
+}
 
 function App() {
   return (
@@ -17,7 +25,10 @@ function App() {
     // </React.Fragment>
 
     <div>
-      <Variables/>
+      {/* <Variables /> */}
+
+      <Props name={"Nursel"} surname={"Demirkiran"} age={27} developer={true} info={_info} />
+
     </div>
 
   );
