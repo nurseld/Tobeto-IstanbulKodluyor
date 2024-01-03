@@ -4,6 +4,7 @@ import './App.css';
 import Header from "./components/Header.js";
 import Variables from './components/Variables.js';
 import Props from './components/Props.js';
+import Loops from './components/Loops.js';
 
 const _info = {
 
@@ -11,6 +12,31 @@ const _info = {
   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur rem blanditiis similique."
 
 }
+
+const users = [
+
+  {
+    id: 100,
+    name: "Leanne Graham",
+    username: "Bret",
+    company: "Romaguera-Crona"
+  },
+
+  {
+    id: 101,
+    name: "Ervin Howell",
+    username: "Antonette",
+    company: "Deckow-Crist"
+  },
+
+  {
+    id: 102,
+    name: "Clementine Bauch",
+    username: "Samantha",
+    company: "Romaguera-Jacobson"
+  },
+
+];
 
 function App() {
   return (
@@ -27,7 +53,9 @@ function App() {
     <div>
       {/* <Variables /> */}
 
-      <Props name={"Nursel"} surname={"Demirkiran"} age={27} developer={true} info={_info} />
+      {/* <Props name={"Nursel"} surname={"Demirkiran"} age={27} developer={true} info={_info} /> */}
+
+      <Loops users={users} />
 
     </div>
 
