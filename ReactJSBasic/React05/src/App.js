@@ -7,6 +7,7 @@ import Props from './components/Props.js';
 import Loops from './components/Loops.js';
 import UserDetail from './components/UserDetail.js';
 import UsingState from './components/UsingState.js';
+import StateArray from './components/StateArray.js';
 
 const _info = {
 
@@ -61,7 +62,9 @@ function App() {
 
       {/* <UserDetail name={"Nursel Demirkıran"} age={"27"} hobbies={["book", "guitar", "coding"]} address={{ detail: "address", zipcode: 59500 }} /> */}
 
-      <UsingState />
+      {/* <UsingState /> */}
+
+      <StateArray />
 
     </div>
 
