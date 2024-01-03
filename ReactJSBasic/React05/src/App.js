@@ -5,6 +5,7 @@ import Header from "./components/Header.js";
 import Variables from './components/Variables.js';
 import Props from './components/Props.js';
 import Loops from './components/Loops.js';
+import UserDetail from './components/UserDetail.js';
 
 const _info = {
 
@@ -55,7 +56,9 @@ function App() {
 
       {/* <Props name={"Nursel"} surname={"Demirkiran"} age={27} developer={true} info={_info} /> */}
 
-      <Loops users={users} />
+      {/* <Loops users={users} /> */}
+
+      <UserDetail name={"Nursel Demirkıran"} age={27} hobbies={["book", "guitar", "coding"]} address={{ detail: "address", zipcode: 59500 }} />
 
     </div>
 
