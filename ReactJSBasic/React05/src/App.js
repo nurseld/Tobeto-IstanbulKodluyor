@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from "./components/Header.js";
 import Variables from './components/Variables.js';
@@ -11,6 +11,10 @@ import StateArray from './components/StateArray.js';
 import StateObject from './components/StateObject.js';
 import StateInput from './components/StateInput.js';
 import StateInput2 from './components/StateInput2.js';
+import UsingUseEffect from './components/UsingUseEffect.js';
+import MountUnmount from './components/MountUnmount.js';
+import UsingCss from './components/UsingCss.js';
+import UsingCssModule from './components/CssModule/UsingCssModule.js';
 
 const _info = {
 
@@ -44,7 +48,12 @@ const users = [
 
 ];
 
+
+
 function App() {
+
+  const [isVisible, setIsVisible] = useState(true);
+
   return (
 
     // <React.Fragment>
@@ -73,9 +82,23 @@ function App() {
 
       {/* <StateInput /> */}
 
-      <StateInput2 />
+      {/* <StateInput2 /> */}
+
+      {/* <UsingUseEffect /> */}
+
+      {/* <div>
+
+        {isVisible && <MountUnmount />}
+        <button onClick={() => setIsVisible(!isVisible)}>Göster/Gizle MountUnmount Component</button>
+
+      </div> */}
+
+      {/* <UsingCss /> */}
+
+      <UsingCssModule />
 
     </div>
+
 
   );
 }
