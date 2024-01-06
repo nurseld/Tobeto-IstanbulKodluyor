@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Users from "./components/Users";
 import User from "./components/User";
+import NoMatch from "./components/NoMatch";
 
 function App() {
   return (
@@ -41,8 +42,18 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="users" element={<Users />} />
-          <Route path="user/:id" element={<User />} />
+          <Route path="users" element={<Users />} >
+            <Route path=":id" element={<User />} />
+          </Route>
+          <Route path="*" element={<NoMatch />} />
+          {/* <Route path="*" element={
+            <div className="row my-5">
+              <div className="col text-center">
+                <h4 className="display-5">Page Not Found!</h4>
+                <Link to="/">Back to Homepage</Link>
+              </div>
+            </div>
+          } /> */}
         </Routes>
 
       </div>
@@ -50,5 +61,18 @@ function App() {
 
   );
 }
+
+// function NoMatch() {
+//   return (
+
+//     <div className="row my-5">
+//       <div className="col text-center">
+//         <h4 className="display-5">Page Not Found!</h4>
+//         <Link to="/">Back to Homepage</Link>
+//       </div>
+//     </div>
+
+//   );
+// }
 
 export default App;

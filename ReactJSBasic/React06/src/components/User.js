@@ -12,7 +12,7 @@ function User() {
             .then((res) => res.json())
             .then((data) => setUser(data));
 
-    }, []);
+    }, [id]);
 
     return (
         <>

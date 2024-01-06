@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 function Users() {
 
@@ -15,18 +15,22 @@ function Users() {
     return (
         <>
             <div className='row'>
-                <div className='col-12'>
+                <div className='col-6'>
                     <h2>Users</h2>
                     <hr />
                     <ul className='list-group'>
                         {
                             users.map((user) => {
                                 return <li className='list-group-item' key={user.id}>
-                                    <Link to={`/user/${user.id}`}>{user.name} ({user.username})</Link>
+                                    <Link to={`/users/${user.id}`}>{user.name} ({user.username})</Link>
                                 </li>
                             })
                         }
                     </ul>
+                </div>
+                <div className='col-6'>
+                    <Outlet />
+
                 </div>
             </div>
         </>
