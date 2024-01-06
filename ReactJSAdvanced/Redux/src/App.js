@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import Category from './components/Category';
 import Tag from './components/Tag';
+import Counter from './features/Counter';
 
 function App() {
 
@@ -11,8 +12,10 @@ function App() {
   return (
     <div className="App">
 
-      <Category val={value} setVal={setValue} />
-      <Tag val={value} setVal={setValue} />
+      {/* <Category val={value} setVal={setValue} />
+      <Tag val={value} setVal={setValue} /> */}
+
+      <Counter />
 
     </div>
   );
