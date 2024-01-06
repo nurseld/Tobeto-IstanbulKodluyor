@@ -1,8 +1,10 @@
-import { Link, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Link, Route, Routes, useMatch } from "react-router-dom";
 import UsingAxios from "./components/UsingAxios";
 import UsingFetch from "./components/UsingFetch";
 import Home from "./components/Home";
 import About from "./components/About";
+
 
 function App() {
   return (
@@ -14,10 +16,10 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link to="/" className="nav-link">Home</Link>
+                <Link to="/" className={useMatch({ path: "", end: true }) ? "nav-link active" : "nav-link"}>Home</Link>
               </li>
               <li className="nav-item">
-                <Link to="/about" className="nav-link">About</Link>
+                <Link to="/about" className={useMatch({ path: "about", end: true }) ? "nav-link active" : "nav-link"}>About</Link>
               </li>
             </ul>
           </div>
