@@ -17,4 +17,6 @@ export const tickSlice = createSlice({
 
 export const { increment, decrement } = tickSlice.actions;
 
+export const selectTick = state => state.tick.value;
+
 export default tickSlice.reducer;
