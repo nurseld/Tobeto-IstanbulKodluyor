@@ -4,7 +4,8 @@ import UsingAxios from "./components/UsingAxios";
 import UsingFetch from "./components/UsingFetch";
 import Home from "./components/Home";
 import About from "./components/About";
-
+import Users from "./components/Users";
+import User from "./components/User";
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
               </li>
               <li className="nav-item">
                 <Link to="/about" className={useMatch({ path: "about", end: true }) ? "nav-link active" : "nav-link"}>About</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/users" className={useMatch({ path: "users", end: true }) ? "nav-link active" : "nav-link"}>Users</Link>
               </li>
             </ul>
           </div>
@@ -37,6 +41,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="users" element={<Users />} />
+          <Route path="user/:id" element={<User />} />
         </Routes>
 
       </div>
