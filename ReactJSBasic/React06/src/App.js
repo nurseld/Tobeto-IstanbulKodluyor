@@ -1,16 +1,30 @@
 import { Link, Route, Routes } from "react-router-dom";
 import UsingAxios from "./components/UsingAxios";
 import UsingFetch from "./components/UsingFetch";
+import Home from "./components/Home";
+import About from "./components/About";
 
 function App() {
   return (
 
-    <div>
-      <h1>Welcome to React Router!</h1>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-      </Routes>
+    <>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <Link to="/" className="navbar-brand">React Router</Link>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link">About</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
 
       <div className="container">
 
@@ -18,39 +32,14 @@ function App() {
 
         {/* <UsingAxios /> */}
 
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+        </Routes>
+
       </div>
-    </div>
-
-  );
-}
-
-function Home() {
-  return (
-    <>
-      <main>
-        <h2>Welcome to the homepage!</h2>
-        <p>You can d othis, I believe in you.</p>
-      </main>
-      <nav>
-        <Link to="/about">About</Link>
-      </nav>
     </>
-  );
-}
 
-function About() {
-  return (
-    <>
-      <main>
-        <h2>Who are we?</h2>
-        <p>
-          The feels like an existential question, don't you think ?
-        </p>
-      </main>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
-    </>
   );
 }
 
