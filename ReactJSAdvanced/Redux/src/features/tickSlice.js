@@ -11,11 +11,18 @@ export const tickSlice = createSlice({
         },
         decrement: (state) => {
             state.value -= 1;
+        },
+        incrementByAmount: (state, action) => {
+            console.log("state", state);
+            console.log("action", action);
+
+            state.value += action.payload.val;
         }
+
     }
 });
 
-export const { increment, decrement } = tickSlice.actions;
+export const { increment, decrement, incrementByAmount } = tickSlice.actions;
 
 export const selectTick = state => state.tick.value;
 
