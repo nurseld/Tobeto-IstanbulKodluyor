@@ -26,4 +26,10 @@ export const { increment, decrement, incrementByAmount } = tickSlice.actions;
 
 export const selectTick = state => state.tick.value;
 
+export const incrementByAmountAsync = payload => dispatch => {
+    setTimeout(() => {
+        dispatch(incrementByAmount(payload));
+    }, 2000)
+}
+
 export default tickSlice.reducer;

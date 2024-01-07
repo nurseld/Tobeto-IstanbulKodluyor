@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { increment, decrement, incrementByAmount, selectTick } from "../tickSlice";
+import { increment, decrement, incrementByAmount, selectTick, incrementByAmountAsync } from "../tickSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Counter() {
@@ -18,6 +18,7 @@ export default function Counter() {
 
             <input value={amount} onChange={(e) => setAmount(e.target.value)} />
             <button onClick={() => dispatch(incrementByAmount({ val: parseInt(amount) }))}>Increment by Amount</button>
+            <button onClick={() => dispatch(incrementByAmountAsync({ val: parseInt(amount) }))}>Increment by Amount Async</button>
         </>
     );
 }
